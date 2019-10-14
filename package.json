@@ -1,0 +1,18 @@
+{
+  "name": "linux-deploy-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:yangguanyong/linux-deploy-server.git",
+  "author": "中投靓仔 <453493671@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "egg": "^2.24.0",
+    "koa": "^2.10.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.14.0"
+  },
+  "scripts": {
+    "dev": "egg-bin dev"
+  }
+}
