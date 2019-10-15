@@ -24,7 +24,8 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:yangguanyong/linux-deploy-server.git',
       path : '/opt/code/first-demo/linux-deploy-server',
-      'post-deploy' : 'git pull && yarn && yarn dev &&  pm2 startOrRestart ecosystem.config.js --env production'
+      'pre-setup': 'git pull',
+      'post-deploy' : 'yarn && pm2 startOrRestart ecosystem.config.js --env production'
     }
   }
 };
