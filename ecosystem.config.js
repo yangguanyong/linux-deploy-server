@@ -1,7 +1,7 @@
 module.exports = {
   apps : [{
     name: 'linux-deploy-server',
-    script: 'app.js',
+    script: 'app2.js',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     args: 'one two',
