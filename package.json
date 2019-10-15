@@ -6,13 +6,11 @@
   "author": "中投靓仔 <453493671@qq.com>",
   "license": "MIT",
   "dependencies": {
-    "egg": "^2.24.0",
-    "koa": "^2.10.0"
+    "koa": "^2.10.0",
+    "pm2": "^4.1.1"
   },
-  "devDependencies": {
-    "egg-bin": "^4.14.0"
-  },
+  "devDependencies": {},
   "scripts": {
-    "dev": "egg-bin dev"
+    "dev": "node app.js"
   }
 }
