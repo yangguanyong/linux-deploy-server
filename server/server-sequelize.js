@@ -26,7 +26,7 @@ User.init({
   }
 }, {
   sequelize,
-  modelName: 'user', // 表名称为users,表名自动复数
+  modelName: 'User', // 表名称为users,表名自动复数
   freezeTableName: false // 表名是否取消复数
   // 参数
 })
