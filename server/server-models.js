@@ -13,6 +13,12 @@ const sequelize = new Sequelize('test', 'root', 'Ygy5583330', {
  */
 
 const User = require('../models/user')(sequelize, Sequelize);
+const Paper = require('../models/paper')(sequelize, Sequelize);
+
+module.exports = {
+  User,
+  Paper
+}
 
 /*
 定义模型（表）
@@ -37,7 +43,7 @@ const User = require('../models/user')(sequelize, Sequelize);
 //   // 参数
 // })
 
-module.exports = User;
+// module.exports = User;
 
 /*
 增删改查
