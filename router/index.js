@@ -1,7 +1,7 @@
 var Router = require('koa-router')
 var router = new Router();
 
-var User = require('./../server/server-sequelize');
+var User = require('./../server/server-models');
 
 router.get('/search', async function (ctx, next) {
   var result = await User.findAll();
