@@ -19,7 +19,7 @@ router.get('/searchPaper', async function (ctx, next) {
 })
 
 router.get('/insertPaper', async function (ctx, next) {
-  var result = await Paper.create({ title: "yang", content: "guanyong" });
+  var result = await Paper.create({ title: "杨", content: "观勇" });
   ctx.body = '创建成功' + JSON.stringify(result);
 })
 
