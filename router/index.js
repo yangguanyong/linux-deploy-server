@@ -1,7 +1,7 @@
 var Router = require('koa-router')
 var router = new Router();
 
-var { User, Paper, Report } = require('./../server/server-models');
+var { User, Paper, Report, Chear } = require('./../server/server-models');
 
 router.get('/searchUser', async function (ctx, next) {
   var result = await User.findAll();
@@ -30,6 +30,16 @@ router.get('/searchReport', async function (ctx, next) {
 
 router.get('/insertReport', async function (ctx, next) {
   var result = await Report.create({ title: "杨", content: "观勇" });
+  ctx.body = '创建成功' + JSON.stringify(result);
+})
+
+router.get('/searchChear', async function (ctx, next) {
+  var result = await Chear.findAll();
+  ctx.body = JSON.stringify(result, null, 4);
+})
+
+router.get('/insertChear', async function (ctx, next) {
+  var result = await Chear.create({ title: "杨", content: "观勇" });
   ctx.body = '创建成功' + JSON.stringify(result);
 })
 

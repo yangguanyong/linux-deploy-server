@@ -15,11 +15,13 @@ const sequelize = new Sequelize('test', 'root', 'Ygy5583330', {
 const User = require('../models/user')(sequelize, Sequelize);
 const Paper = require('../models/paper')(sequelize, Sequelize);
 const Report = require('../models/paper')(sequelize, Sequelize);
+const Chear = require('../models/chear')(sequelize, Sequelize);
 
 module.exports = {
   User,
   Paper,
-  Report
+  Report,
+  Chear
 }
 
 /*
