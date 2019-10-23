@@ -25,7 +25,10 @@ module.exports = {
       repo : 'git@github.com:yangguanyong/linux-deploy-server.git',
       path : '/opt/code/first-demo/linux-deploy-server',
       'pre-setup': 'git pull',
-      'post-deploy' : 'yarn && npx sequelize-cli db:migrate && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'yarn && npx sequelize-cli db:migrate && pm2 reload ecosystem.config.js --env production',
+      'env': {
+        "NODE_ENV": "production"
+      }
     }
   }
 };
