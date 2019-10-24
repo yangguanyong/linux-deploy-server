@@ -1,3 +1,5 @@
+cd /opt/code/first-demo/linux-deploy-server
+got clone git@github.com:yangguanyong/linux-deploy-server.git
 git pull
 yarn
 npx sequelize-cli db:migrate --env production
