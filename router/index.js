@@ -3,6 +3,10 @@ var router = new Router();
 
 var { User, Paper, Report, Chear } = require('./../server/server-models');
 
+router.get('/getEnv', () => {
+  ctx.body = String(process.env.NODE_ENV)
+})
+
 router.get('/searchUser', async function (ctx, next) {
   var result = await User.findAll();
   ctx.body = JSON.stringify(result, null, 4);
