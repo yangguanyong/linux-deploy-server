@@ -3,7 +3,7 @@ var router = new Router();
 
 var { User, Paper, Report, Chear } = require('./../server/server-models');
 
-router.get('/getEnv', () => {
+router.get('/getEnv', (ctx, next) => {
   ctx.body = String(process.env.NODE_ENV)
 })
 
