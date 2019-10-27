@@ -1,15 +1,11 @@
 const Koa = require('koa');
 const app = new Koa();
+const fs = require('fs')
 var cors = require('koa-cors');
+var registerRouter = require('./app/router/index');
 app.use(cors())
 
-console.log('env: ', process.env.NODE_ENV)
-
-// require('./server/server-sequelize');
-
-var router = require('./router/index');
 app
-.use(router.routes())
-.use(router.allowedMethods());
+.use(registerRouter())
 
 app.listen(3000);

@@ -3,7 +3,7 @@
 */ 
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('test', 'root', 'Ygy5583330', {
+const sequelize = new Sequelize('bbs', 'root', 'Ygy5583330', {
   host: 'localhost',
   dialect: 'mysql'
 });
@@ -12,16 +12,22 @@ const sequelize = new Sequelize('test', 'root', 'Ygy5583330', {
  * 分发模型
  */
 
-const User = require('../models/user')(sequelize, Sequelize);
-const Paper = require('../models/paper')(sequelize, Sequelize);
-const Report = require('../models/paper')(sequelize, Sequelize);
-const Chear = require('../models/chear')(sequelize, Sequelize);
+const Plate = require('../../models/plate')(sequelize, Sequelize);
+const Platemaster = require('../../models/platemaster')(sequelize, Sequelize);
+const Post = require('../../models/post')(sequelize, Sequelize);
+const Posthistory = require('../../models/posthistory')(sequelize, Sequelize);
+const Reply = require('../../models/reply')(sequelize, Sequelize);
+const Rule = require('../../models/rule')(sequelize, Sequelize);
+const User = require('../../models/user')(sequelize, Sequelize);
 
 module.exports = {
-  User,
-  Paper,
-  Report,
-  Chear
+  Plate,
+  Platemaster,
+  Post,
+  Posthistory,
+  Reply,
+  Rule,
+  User
 }
 
 /*
