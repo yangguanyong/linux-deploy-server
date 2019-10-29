@@ -8,28 +8,28 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      TITLE: {
+      title: {
         type: Sequelize.STRING
       },
-      CONTENT: {
+      content: {
         type: Sequelize.STRING
       },
-      USER_ID: {
+      userId: {
         type: Sequelize.INTEGER
       },
-      DATE: {
+      date: {
         type: Sequelize.DATE
       },
-      PLATE_ID: {
+      plateId: {
         type: Sequelize.INTEGER
       },
-      STATUS: {
+      status: {
         type: Sequelize.INTEGER
       },
-      REPLY_COUNT: {
+      replyCount: {
         type: Sequelize.INTEGER
       },
-      READ_COUNT: {
+      readCount: {
         type: Sequelize.INTEGER
       },
       createdAt: {

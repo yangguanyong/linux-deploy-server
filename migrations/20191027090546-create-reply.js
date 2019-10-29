@@ -8,22 +8,22 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      USER_ID: {
+      userId: {
         type: Sequelize.INTEGER
       },
-      CONTENT: {
+      content: {
         type: Sequelize.STRING
       },
-      QUOTE_ID: {
+      quoteId: {
         type: Sequelize.INTEGER
       },
-      DATE: {
+      date: {
         type: Sequelize.DATE
       },
-      STATUS: {
+      status: {
         type: Sequelize.INTEGER
       },
-      LIGHT_UP_COUNT: {
+      lightUpCount: {
         type: Sequelize.INTEGER
       },
       createdAt: {

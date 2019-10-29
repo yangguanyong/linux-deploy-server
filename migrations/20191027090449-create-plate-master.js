@@ -8,13 +8,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      USER_ID: {
+      userId: {
         type: Sequelize.INTEGER
       },
-      PLATE_ID: {
+      plateId: {
         type: Sequelize.INTEGER
       },
-      DATE: {
+      date: {
         type: Sequelize.DATE
       },
       createdAt: {

@@ -8,19 +8,19 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      POST_ID: {
+      postId: {
         type: Sequelize.INTEGER
       },
-      MASTER_ID: {
+      masterId: {
         type: Sequelize.INTEGER
       },
-      STATUS: {
+      status: {
         type: Sequelize.INTEGER
       },
-      CAUSE: {
+      cause: {
         type: Sequelize.STRING
       },
-      REMARK: {
+      remark: {
         type: Sequelize.STRING
       },
       createdAt: {

@@ -8,25 +8,25 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      NAME: {
+      name: {
         type: Sequelize.STRING
       },
-      PASSWORD: {
+      password: {
         type: Sequelize.STRING
       },
-      ACCOUNT: {
+      account: {
         type: Sequelize.STRING
       },
-      RULE_ID: {
+      ruleId: {
         type: Sequelize.INTEGER
       },
-      HEAD_PIC: {
+      headPic: {
         type: Sequelize.STRING
       },
-      STATUS: {
+      status: {
         type: Sequelize.INTEGER
       },
-      REGISTER_TIME: {
+      registerTime: {
         type: Sequelize.DATE
       },
       createdAt: {
