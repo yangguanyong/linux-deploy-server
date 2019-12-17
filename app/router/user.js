@@ -1,13 +1,15 @@
 var Router = require('koa-router')
 var router = new Router();
+const auth = require('../middeware/auth')
 
 var UserController = require('./../controller/user')
-// var UserController = require('./../controller/login')
 
-router.get('/searchUser', UserController.getUser)
+router.get('/user/login', UserController.loginHandle)
 
-router.get('/insertUser', UserController.addUserInfo)
+router.post('/user/register', UserController.registerHandle)
 
-// router.get('/login', UserController.loginHandle)
+router.get('/user/getUserInfo', auth, UserController.getUserInfoHandle)
+
+router.get('/user/logout', UserController.logoutHandle)
 
 module.exports = router

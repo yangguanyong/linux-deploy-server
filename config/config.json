@@ -2,21 +2,21 @@
   "development": {
     "username": "root",
     "password": "Ygy5583330",
-    "database": "bbs",
+    "database": "album",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "Ygy5583330",
-    "database": "bbs",
+    "database": "album",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": "Ygy5583330",
-    "database": "bbs",
+    "database": "album",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

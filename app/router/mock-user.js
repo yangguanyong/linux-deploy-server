@@ -1,7 +1,7 @@
 var Router = require('koa-router')
 var router = new Router();
 
-router.get('/user/login', async (ctx, next) => {
+router.get('/mock/user/login', async (ctx, next) => {
   ctx.body = {
     code: 200,
     message: '成功',
@@ -9,7 +9,7 @@ router.get('/user/login', async (ctx, next) => {
   }
 })
 
-router.get('/user/getUserInfo', async (ctx, next) => {
+router.get('/mock/user/getUserInfo', async (ctx, next) => {
   ctx.body = {
     code: 200,
     message: '成功',
@@ -20,7 +20,7 @@ router.get('/user/getUserInfo', async (ctx, next) => {
   }
 })
 
-router.get('/user/logout', async (ctx, next) => {
+router.get('/mock/user/logout', async (ctx, next) => {
   ctx.body = {
     code: 200,
     message: '成功',
@@ -36,7 +36,7 @@ router.get('/user/testOvertimeLogout', async (ctx, next) => {
   }
 })
 
-router.get('/user/register', async (ctx, next) => {
+router.get('/mock/user/register', async (ctx, next) => {
   ctx.body = {
     code: 200,
     message: '成功',

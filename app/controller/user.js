@@ -1,31 +1,86 @@
 var userService = require('./../service/user')
-
-// 在此处进行一些404的封装
-// 对query的一些操作，需要封装提取
+var secretKey = require('../util/secret-key')
 
 module.exports = {
-  async getUser(ctx, next) {
-    const result = await userService.getUser()
-    ctx.body = {
-      code: 0,
-      message: '成功',
-      response: result
+  async loginHandle(ctx, next) {
+    const body = {
+      code: 200,
+      message: 'success',
+      response: ''
     }
+    const params = ctx.request.query
+    const { account, password } = params
+    const result = await userService.getUser({
+      where: {
+        account: account
+      }
+    })
+    if (result.length !== 0) {
+      const user = result[0].dataValues
+      if (user && user.password === password) {
+        const id = user.id
+        const date = Date.now()
+        const token = secretKey.encode(id, date)
+        await userService.updateUser({ // 更新数据库的最后登录时间
+          lastLogin: date
+        }, {
+          id: id
+        })
+        body.response = token
+      } else {
+        body.response = '密码错误'
+        body.message = 'fail'
+      }
+    } else {
+      body.response = '账号不存在'
+      body.message = 'fail'
+    }
+    ctx.body = body
   },
-  async addUserInfo(ctx, next) {
-    var result = await userService.addUser({
-      name: "杨观勇",
-      password: "Ygy5583330",
-      account: 'yangguanyong',
-      rule_id: 1,
-      head_pic: '',
-      status: 0,
-      register_time: new Date()
-    });
-    ctx.body = {
-      code: 0,
-      messgae: '成功',
-      response: result
+  async registerHandle(ctx, next) {
+    const body = {
+      code: 200,
+      message: 'success',
+      response: '注册成功'
     }
+    const data = ctx.request.body
+    const { account, username, password } = data
+    const result = await userService.getUser({
+      where: {
+        account: account
+      }
+    })
+    if (result.length !== 0) {
+      body.message = 'fail'
+      body.response = '账号已存在'
+    } else {
+      await userService.addUser({
+        account: account,
+        username: username,
+        password, password
+      })
+      body.response = '注册成功'
+    }
+    ctx.body = body
+  },
+  async getUserInfoHandle(ctx, next) {
+    const body = {
+      code: 200,
+      message: 'success',
+      response: null
+    }
+    const user = ctx.state.user
+    if (user) {
+      body.response = user
+    }
+    ctx.body = body
+  },
+  async logoutHandle(ctx, next) { // todo: 当以后把token保存在redis中，这里做清除redis的操作
+    const body = {
+      code: 200,
+      message: 'success',
+      response: '登出成功'
+    }
+    ctx.body = body
   }
 }

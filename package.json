@@ -6,12 +6,15 @@
   "author": "中投靓仔 <453493671@qq.com>",
   "license": "MIT",
   "dependencies": {
+    "crypto": "^1.0.1",
     "koa": "^2.10.0",
+    "koa-bodyparser": "^4.2.1",
     "koa-cors": "^0.0.16",
     "koa-router": "^7.4.0",
     "mongodb": "^3.3.3",
     "mysql": "^2.17.1",
     "mysql2": "^1.7.0",
+    "node-inspect": "^1.11.6",
     "nodemon": "^1.19.4",
     "pm2": "^4.1.1",
     "sequelize": "^5.21.1",
@@ -19,6 +22,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon --inspect app.js"
   }
 }
