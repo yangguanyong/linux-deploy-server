@@ -30,7 +30,7 @@ module.exports = async function (ctx, next) {
 
 const getUserByToken = async function (token) {
   const { id, timespan } = secretKey.decode(token)
-  const effectiveTime = 1000 * 10 // 有效时间
+  const effectiveTime = 1000 * 60 * 60 // 有效时间
   if (Date.now() - timespan > effectiveTime) {
     return null
   }

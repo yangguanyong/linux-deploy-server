@@ -1,7 +1,7 @@
-var Router = require('koa-router')
+var Router = require('koa-router');
 var router = new Router();
 
-router.get('/album/getList', async (ctx, next) => {
+router.get('/mock/album/getList', async (ctx, next) => {
   ctx.body = {
     code: 200,
     message: '成功',
