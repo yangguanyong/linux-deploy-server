@@ -2,6 +2,7 @@ var userService = require('./../service/user')
 var secretKey = require('../util/secret-key')
 
 module.exports = {
+
   async loginHandle(ctx, next) {
     const body = {
       code: 200,
@@ -37,6 +38,7 @@ module.exports = {
     }
     ctx.body = body
   },
+
   async registerHandle(ctx, next) {
     const body = {
       code: 200,
@@ -63,6 +65,7 @@ module.exports = {
     }
     ctx.body = body
   },
+
   async getUserInfoHandle(ctx, next) {
     const body = {
       code: 200,
@@ -75,6 +78,7 @@ module.exports = {
     }
     ctx.body = body
   },
+  
   async logoutHandle(ctx, next) { // todo: 当以后把token保存在redis中，这里做清除redis的操作
     const body = {
       code: 200,

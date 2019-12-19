@@ -20,7 +20,7 @@ router.get('/mock/album/getList', async (ctx, next) => {
   }
 })
 
-router.post('/album/add', async (ctx, next) => {
+router.post('/mock/album/add', async (ctx, next) => {
   ctx.body = {
     code: 200,
     message: '成功',
@@ -28,7 +28,7 @@ router.post('/album/add', async (ctx, next) => {
   }
 })
 
-router.get('/album/getDetail', async (ctx, next) => {
+router.get('/mock/album/getDetail', async (ctx, next) => {
   ctx.body = {
     code: 200,
     message: '成功',
