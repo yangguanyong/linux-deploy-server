@@ -1,5 +1,8 @@
 const staticPath = './static/'
-const multer = require('@koa/multer')
-const upload = multer({ dest: staticPath })
+// const multer = require('@koa/multer')
+// const upload = multer({ dest: staticPath })
 
-module.exports = upload
+var multipart = require('connect-multiparty');
+var multipartMiddleware = multipart();
+
+module.exports = multipartMiddleware

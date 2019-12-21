@@ -7,8 +7,10 @@
   "license": "MIT",
   "dependencies": {
     "@koa/multer": "^2.0.1",
+    "connect-multiparty": "^2.2.0",
     "crypto": "^1.0.1",
     "koa": "^2.10.0",
+    "koa-body": "^4.1.1",
     "koa-bodyparser": "^4.2.1",
     "koa-cors": "^0.0.16",
     "koa-multer": "^1.0.2",
