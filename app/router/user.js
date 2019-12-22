@@ -4,12 +4,12 @@ const auth = require('../middeware/auth')
 
 var UserController = require('./../controller/user')
 
-router.get('/user/login', UserController.loginHandle)
+router.get('/api/user/login', UserController.loginHandle)
 
-router.post('/user/register', UserController.registerHandle)
+router.post('/api/user/register', UserController.registerHandle)
 
-router.get('/user/getUserInfo', auth, UserController.getUserInfoHandle)
+router.get('/api/user/getUserInfo', auth, UserController.getUserInfoHandle)
 
-router.get('/user/logout', UserController.logoutHandle)
+router.get('/api/user/logout', UserController.logoutHandle)
 
 module.exports = router

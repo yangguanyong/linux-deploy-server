@@ -6,7 +6,7 @@ var upload = require('../util/multer')
 var UploadController = require('./../controller/upload')
 
 router.post(
-  '/upload/file',
+  '/api/upload/file',
   auth,
   UploadController.uploadHandle)
 

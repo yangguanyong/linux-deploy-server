@@ -4,6 +4,6 @@ const auth = require('../middeware/auth')
 
 var PhotoController = require('./../controller/photo')
 
-router.post('/photo/addPhoto', auth, PhotoController.addPhotoHandle)
+router.post('/api/photo/addPhoto', auth, PhotoController.addPhotoHandle)
 
 module.exports = router
