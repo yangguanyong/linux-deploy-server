@@ -1,7 +1,7 @@
 var Router = require('koa-router')
 var router = new Router();
 
-router.get('/system/getUserList', async (ctx, next) => {
+router.get('/api/system/getUserList', async (ctx, next) => {
   ctx.body = {
     code: 200,
     message: '成功',
@@ -20,7 +20,7 @@ router.get('/system/getUserList', async (ctx, next) => {
   }
 })
 
-router.post('/system/changeType', async (ctx, next) => {
+router.post('/api/system/changeType', async (ctx, next) => {
   ctx.body = {
     code: 200,
     message: '成功',
@@ -28,7 +28,7 @@ router.post('/system/changeType', async (ctx, next) => {
   }
 })
 
-router.get('/system/getPhotoList', async (ctx, next) => {
+router.get('/api/system/getPhotoList', async (ctx, next) => {
   ctx.body = {
     code: 200,
     message: '成功',
@@ -53,7 +53,7 @@ router.get('/system/getPhotoList', async (ctx, next) => {
   }
 })
 
-router.post('/system/changePhotoType', async (ctx, next) => {
+router.post('/api/system/changePhotoType', async (ctx, next) => {
   ctx.body = {
     code: 200,
     message: '成功',

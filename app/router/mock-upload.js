@@ -1,7 +1,7 @@
 var Router = require('koa-router')
 var router = new Router();
 
-router.post('/mock/upload/file', async (ctx, next) => {
+router.post('/api/mock/upload/file', async (ctx, next) => {
   // 处理文件流
   ctx.body = {
     code: 200,
