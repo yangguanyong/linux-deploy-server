@@ -1,5 +1,6 @@
 module.exports = {
   async uploadHandle(ctx, next) {
+    console.log(ctx)
     const body = {
       code: 200,
       message: 'success',
@@ -11,13 +12,14 @@ module.exports = {
       response = '上传文件获取失败'
     } else {
       const fileName = files.data.name
-      const origin = ctx.request.origin
-      const staticPath = '/static/'
+      // const origin = ctx.request.origin
+      const origin = ctx.origin
+      // const staticPath = '/static/'
       if (!fileName) {
         ctx.message = 'fail',
         response = '获取文件名称失败'
       } else {
-        body.response = `${staticPath}${fileName}`
+        body.response = `${origin}/${fileName}`
       }
     }
     ctx.body = body
