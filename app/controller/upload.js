@@ -12,14 +12,13 @@ module.exports = {
     } else {
       const fileName = files.data.name
       // const origin = ctx.request.origin
-      const origin = ctx.origin
+      const origin = ctx.header.origin
       // const staticPath = '/static/'
       if (!fileName) {
         ctx.message = 'fail',
         response = '获取文件名称失败'
       } else {
-        // body.response = `${origin}/${fileName}`
-        body.response = `${JSON.stringify(ctx)}`
+        body.response = `${origin}/${fileName}`
       }
     }
     ctx.body = body
