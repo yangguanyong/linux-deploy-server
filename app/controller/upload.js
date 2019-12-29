@@ -1,6 +1,5 @@
 module.exports = {
   async uploadHandle(ctx, next) {
-    console.log(ctx)
     const body = {
       code: 200,
       message: 'success',
@@ -19,7 +18,8 @@ module.exports = {
         ctx.message = 'fail',
         response = '获取文件名称失败'
       } else {
-        body.response = `${origin}/${fileName}`
+        // body.response = `${origin}/${fileName}`
+        body.response = `${JSON.stringify(ctx)}`
       }
     }
     ctx.body = body
