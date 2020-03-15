@@ -27,6 +27,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "nodemon --inspect app.js"
+    "serve": "nodemon --inspect app.js"
   }
 }
