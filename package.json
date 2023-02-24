@@ -22,7 +22,7 @@
     "node-inspect": "^1.11.6",
     "nodemon": "^1.19.4",
     "pm2": "^4.1.1",
-    "sequelize": "^5.21.1",
+    "sequelize": "^6.29.0",
     "sequelize-cli": "^5.5.1"
   },
   "devDependencies": {},
